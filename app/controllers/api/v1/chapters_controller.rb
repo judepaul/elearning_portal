@@ -1,15 +1,21 @@
-class ChaptersController < ApplicationController
+class Api::V1::ChaptersController < ApplicationController
   before_action :set_chapter, only: [:show, :edit, :update, :destroy]
 
   # GET /chapters
   # GET /chapters.json
   def index
     @chapters = Chapter.all
+    render json: @chapters
   end
 
   # GET /chapters/1
   # GET /chapters/1.json
   def show
+    @chapterArr = Array.new
+    @chapter.questions.each do |question|
+      @chapterArr << question
+    end
+    render json: @chapterArr
   end
 
   # GET /chapters/new
@@ -69,6 +75,6 @@ class ChaptersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def chapter_params
-      params.require(:chapter).permit(:name,, :topic_id)
+      params.require(:chapter).permit(:name, :topic_id)
     end
 end

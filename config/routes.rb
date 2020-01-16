@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
   resources :answer_options
-  resources :questions
-  resources :chapters
+  #resources :questions
+  namespace :api do  
+    namespace :v1 do   
+      resources :questions
+      resources :chapters  
+    end 
+  end
   resources :topics
   resources :subjects
   resources :exams

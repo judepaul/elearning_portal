@@ -1,4 +1,4 @@
-class QuestionsController < ApplicationController
+class Api::V1::QuestionsController < ApplicationController
   before_action :set_question, only: [:show, :edit, :update, :destroy]
 
   # GET /questions
@@ -10,6 +10,7 @@ class QuestionsController < ApplicationController
   # GET /questions/1
   # GET /questions/1.json
   def show
+    render json: @question
   end
 
   # GET /questions/new
@@ -69,6 +70,6 @@ class QuestionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def question_params
-      params.require(:question).permit(:text,, :type,, :chapter_id)
+      params.require(:question).permit(:text, :q_type, :chapter_id)
     end
 end

@@ -255,21 +255,79 @@ p "Created #{Chapter.count} Chapter"
 Question.destroy_all
 
 Question.create!([{
-  text: "What are the core concepts of OOPS?",
+  text: "Java object oriented programming concepts is/are?",
   q_type: "easy",
   chapter_id: 1
 },
 {
-  text: "What is the difference between Procedural programming and OOPS?",
+  text: "Runtime polymorphism feature in java is",
   q_type: "Medium",
   chapter_id: 1
 },
 {
-  text: "What is the difference between Abstraction and Encapsulation",
+  text: "Encapsulation concept in java is",
   q_type: "hard",
   chapter_id: 1
 }
 ])
 
 p "Created #{Question.count} Question"
+
+
+AnswerOption.destroy_all
+
+AnswerOption.create!([{
+  text: "A.Encapsulation",
+  question_id: 1
+},
+{
+  text: "B.Inheritance",
+  question_id: 1
+},
+{
+  text: "C.polymorphism",
+  question_id: 1
+},
+{
+  text: "D.All of the above.",
+  question_id: 1
+},
+
+{
+  text: "A.method overriding",
+  question_id: 2
+},
+{
+  text: "B.method overloading",
+  question_id: 2
+},
+{
+  text: "C.constructor overloading",
+  question_id: 2
+},
+{
+  text: "D.operator overloading",
+  question_id: 2
+},
+
+{
+  text: "A.Hiding complexity",
+  question_id: 3
+},
+{
+  text: "B.method hiding",
+  question_id: 3
+},
+{
+  text: "C.Hiding constructor",
+  question_id: 3
+},
+{
+  text: "D.None",
+  question_id: 3
+}])
+
+p "Created #{AnswerOption.count} AnswerOption"
+
+
 
