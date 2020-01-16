@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name,: MyString
-  type,: MyString
+  name: MyString
+  exam_type: MyString
   duration: MyString
 
 two:
-  name,: MyString
-  type,: MyString
+  name: MyString
+  exam_type: MyString
   duration: MyString
